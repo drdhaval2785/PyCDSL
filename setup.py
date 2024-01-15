@@ -17,14 +17,16 @@ requirements = [
     'lxml>=4.6.2',
     'peewee>=3.14.4',
     'indic_transliteration>=2.2.4',
+    'cmd2>=2.4.1',
+    "pyreadline3; platform_system == 'Windows'",
 ]
 
-test_requirements = ['pytest>=3', ]
+test_requirements = ['pytest>=3', 'cmd2_ext_test>=2.0.0']
 
 setup(
     author="Hrishikesh Terdalkar",
     author_email='hrishikeshrt@linuxmail.org',
-    python_requires='>=3.7',
+    python_requires='>=3.6',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
@@ -36,6 +38,7 @@ setup(
         'Topic :: Text Processing :: Markup',
         'Topic :: Utilities',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
@@ -56,6 +59,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/hrishikeshrt/PyCDSL',
-    version='0.2.1',
+    version='0.9.0',
     zip_safe=False,
 )

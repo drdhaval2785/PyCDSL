@@ -11,9 +11,18 @@ Python Interface to Cologne Digital Sanskrit Lexicon (CDSL).
 
 __author__ = "Hrishikesh Terdalkar"
 __email__ = 'hrishikeshrt@linuxmail.org'
-__version__ = '0.2.1'
+__version__ = '0.9.0'
 
 ###############################################################################
 
-from .models import DEFAULT_SCHEME, INTERNAL_SCHEME    # noqa
-from .pycdsl import CDSLDict, CDSLCorpus               # noqa
+from .corpus import CDSLCorpus               # noqa
+from .lexicon import CDSLDict                # noqa
+from .shell import CDSLShell                 # noqa
+from .constants import (                     # noqa
+    SERVER_URL,
+    DEFAULT_SCHEME, INTERNAL_SCHEME,
+    DEFAULT_CORPUS_DIR,
+    DEFAULT_DICTIONARIES, ENGLISH_DICTIONARIES,
+    SEARCH_MODE_KEY, SEARCH_MODE_VALUE, SEARCH_MODE_BOTH,
+    DEFAULT_SEARCH_MODE, SEARCH_MODES
+)

@@ -31,7 +31,24 @@ import pycdsl
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode', 'sphinx_rtd_theme']
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.viewcode',
+    'sphinx_rtd_theme'
+]
+
+# Autodoc settings
+autoclass_content = 'both'
+autodoc_member_order = 'bysource'
+
+# Napoleon settings
+napoleon_numpy_docstring = True
+napoleon_include_init_with_doc = True
+napoleon_include_private_with_doc = True
+napoleon_include_special_with_doc = True
+napoleon_use_param = True
+napoleon_use_rtype = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -46,7 +63,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Python Interface to Cologne Digital Sanskrit Lexicon (CDSL)'
+project = 'PyCDSL'
 copyright = "2022, Hrishikesh Terdalkar"
 author = "Hrishikesh Terdalkar"
 
@@ -90,7 +107,9 @@ html_theme = 'sphinx_rtd_theme'
 # theme further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'analytics_id': 'G-KTH2Y3WKC2'
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -128,9 +147,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass
 # [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'pycdsl.tex',
-     'Python Interface to Cologne Digital Sanskrit Lexicon (CDSL) Documentation',
-     'Hrishikesh Terdalkar', 'manual'),
+    (master_doc, 'pycdsl.tex', 'PyCDSL Documentation', author, 'manual'),
 ]
 
 
@@ -139,9 +156,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'pycdsl',
-     'Python Interface to Cologne Digital Sanskrit Lexicon (CDSL) Documentation',
-     [author], 1)
+    (master_doc, 'PyCDSL', 'PyCDSL Documentation', [author], 1)
 ]
 
 
@@ -151,13 +166,10 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'pycdsl',
-     'Python Interface to Cologne Digital Sanskrit Lexicon (CDSL) Documentation',
-     author,
-     'pycdsl',
-     'One line description of project.',
-     'Miscellaneous'),
+    (
+        master_doc, 'PyCDSL', 'PyCDSL Documentation', author,
+        'PyCDSL',
+        'Python Interface to Cologne Digital Sanskrit Lexicon (CDSL).',
+        'Miscellaneous'
+    ),
 ]
-
-
-
